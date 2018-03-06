@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  firstViewController.h
 //  MeiTuan
 //
 //  Created by WangXinjia on 2018/3/6.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface firstViewController : UIViewController
 
 @end
-
