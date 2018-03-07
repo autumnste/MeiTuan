@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D0645FEB204E755500B5851D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0645FEA204E755500B5851D /* AppDelegate.m */; };
-		D0645FEE204E755500B5851D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0645FED204E755500B5851D /* ViewController.m */; };
 		D0645FF1204E755500B5851D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0645FEF204E755500B5851D /* Main.storyboard */; };
-		D0645FF3204E755500B5851D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0645FF2204E755500B5851D /* Assets.xcassets */; };
 		D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0645FF4204E755500B5851D /* LaunchScreen.storyboard */; };
 		D0645FF9204E755500B5851D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0645FF8204E755500B5851D /* main.m */; };
 		D0646003204E755500B5851D /* MeiTuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646002204E755500B5851D /* MeiTuanTests.m */; };
 		D064600E204E755500B5851D /* MeiTuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D064600D204E755500B5851D /* MeiTuanUITests.m */; };
+		D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646021204E7A0100B5851D /* MainTabBarController.m */; };
+		D0646024204E85D100B5851D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0646023204E85D100B5851D /* Media.xcassets */; };
+		D0646027204E948E00B5851D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646026204E948E00B5851D /* firstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +39,7 @@
 		D0645FE6204E755500B5851D /* MeiTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeiTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0645FE9204E755500B5851D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0645FEA204E755500B5851D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0645FEC204E755500B5851D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0645FED204E755500B5851D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0645FF0204E755500B5851D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0645FF2204E755500B5851D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0645FF5204E755500B5851D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0645FF7204E755500B5851D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0645FF8204E755500B5851D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +49,11 @@
 		D0646009204E755500B5851D /* MeiTuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeiTuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D064600D204E755500B5851D /* MeiTuanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeiTuanUITests.m; sourceTree = "<group>"; };
 		D064600F204E755500B5851D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0646020204E7A0100B5851D /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		D0646021204E7A0100B5851D /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		D0646023204E85D100B5851D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		D0646025204E948E00B5851D /* firstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
+		D0646026204E948E00B5851D /* firstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +104,14 @@
 		D0645FE8204E755500B5851D /* MeiTuan */ = {
 			isa = PBXGroup;
 			children = (
+				D064601C204E78D400B5851D /* controllers */,
 				D0645FE9204E755500B5851D /* AppDelegate.h */,
 				D0645FEA204E755500B5851D /* AppDelegate.m */,
-				D0645FEC204E755500B5851D /* ViewController.h */,
-				D0645FED204E755500B5851D /* ViewController.m */,
 				D0645FEF204E755500B5851D /* Main.storyboard */,
-				D0645FF2204E755500B5851D /* Assets.xcassets */,
 				D0645FF4204E755500B5851D /* LaunchScreen.storyboard */,
 				D0645FF7204E755500B5851D /* Info.plist */,
 				D0645FF8204E755500B5851D /* main.m */,
+				D0646023204E85D100B5851D /* Media.xcassets */,
 			);
 			path = MeiTuan;
 			sourceTree = "<group>";
@@ -130,6 +132,17 @@
 				D064600F204E755500B5851D /* Info.plist */,
 			);
 			path = MeiTuanUITests;
+			sourceTree = "<group>";
+		};
+		D064601C204E78D400B5851D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0646020204E7A0100B5851D /* MainTabBarController.h */,
+				D0646021204E7A0100B5851D /* MainTabBarController.m */,
+				D0646025204E948E00B5851D /* firstViewController.h */,
+				D0646026204E948E00B5851D /* firstViewController.m */,
+			);
+			name = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */,
-				D0645FF3204E755500B5851D /* Assets.xcassets in Resources */,
+				D0646024204E85D100B5851D /* Media.xcassets in Resources */,
 				D0645FF1204E755500B5851D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0645FEE204E755500B5851D /* ViewController.m in Sources */,
 				D0645FF9204E755500B5851D /* main.m in Sources */,
 				D0645FEB204E755500B5851D /* AppDelegate.m in Sources */,
+				D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */,
+				D0646027204E948E00B5851D /* firstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
