@@ -16,6 +16,9 @@
 		D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646021204E7A0100B5851D /* MainTabBarController.m */; };
 		D0646024204E85D100B5851D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0646023204E85D100B5851D /* Media.xcassets */; };
 		D0646027204E948E00B5851D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646026204E948E00B5851D /* firstViewController.m */; };
+		D0646030204FAE8700B5851D /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D064602F204FAE8700B5851D /* mineViewController.m */; };
+		D064603B204FF0DA00B5851D /* profileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D064603A204FF0DA00B5851D /* profileView.xib */; };
+		D0646041204FF79000B5851D /* profileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646040204FF79000B5851D /* profileView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,11 @@
 		D0646023204E85D100B5851D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		D0646025204E948E00B5851D /* firstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
 		D0646026204E948E00B5851D /* firstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
+		D064602E204FAE8700B5851D /* mineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
+		D064602F204FAE8700B5851D /* mineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mineViewController.m; sourceTree = "<group>"; };
+		D064603A204FF0DA00B5851D /* profileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileView.xib; sourceTree = "<group>"; };
+		D064603F204FF79000B5851D /* profileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = profileView.h; sourceTree = "<group>"; };
+		D0646040204FF79000B5851D /* profileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = profileView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,13 +112,9 @@
 		D0645FE8204E755500B5851D /* MeiTuan */ = {
 			isa = PBXGroup;
 			children = (
+				D0646033204FE9CD00B5851D /* views */,
 				D064601C204E78D400B5851D /* controllers */,
-				D0645FE9204E755500B5851D /* AppDelegate.h */,
-				D0645FEA204E755500B5851D /* AppDelegate.m */,
-				D0645FEF204E755500B5851D /* Main.storyboard */,
-				D0645FF4204E755500B5851D /* LaunchScreen.storyboard */,
-				D0645FF7204E755500B5851D /* Info.plist */,
-				D0645FF8204E755500B5851D /* main.m */,
+				D0646034204FE9DF00B5851D /* others */,
 				D0646023204E85D100B5851D /* Media.xcassets */,
 			);
 			path = MeiTuan;
@@ -141,8 +145,33 @@
 				D0646021204E7A0100B5851D /* MainTabBarController.m */,
 				D0646025204E948E00B5851D /* firstViewController.h */,
 				D0646026204E948E00B5851D /* firstViewController.m */,
+				D064602E204FAE8700B5851D /* mineViewController.h */,
+				D064602F204FAE8700B5851D /* mineViewController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		D0646033204FE9CD00B5851D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				D0645FEF204E755500B5851D /* Main.storyboard */,
+				D0645FF4204E755500B5851D /* LaunchScreen.storyboard */,
+				D064603A204FF0DA00B5851D /* profileView.xib */,
+				D064603F204FF79000B5851D /* profileView.h */,
+				D0646040204FF79000B5851D /* profileView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		D0646034204FE9DF00B5851D /* others */ = {
+			isa = PBXGroup;
+			children = (
+				D0645FE9204E755500B5851D /* AppDelegate.h */,
+				D0645FEA204E755500B5851D /* AppDelegate.m */,
+				D0645FF7204E755500B5851D /* Info.plist */,
+				D0645FF8204E755500B5851D /* main.m */,
+			);
+			name = others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D064603B204FF0DA00B5851D /* profileView.xib in Resources */,
 				D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */,
 				D0646024204E85D100B5851D /* Media.xcassets in Resources */,
 				D0645FF1204E755500B5851D /* Main.storyboard in Resources */,
@@ -279,6 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0645FF9204E755500B5851D /* main.m in Sources */,
+				D0646030204FAE8700B5851D /* mineViewController.m in Sources */,
+				D0646041204FF79000B5851D /* profileView.m in Sources */,
 				D0645FEB204E755500B5851D /* AppDelegate.m in Sources */,
 				D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */,
 				D0646027204E948E00B5851D /* firstViewController.m in Sources */,

@@ -1,14 +1,14 @@
 //
-//  profileView.m
+//  mineAllMenu.m
 //  MeiTuan
 //
-//  Created by WangXinjia on 2018/3/7.
+//  Created by WangXinjia on 2018/3/9.
 //  Copyright © 2018年 WangXinjia. All rights reserved.
 //
 
-#import "profileView.h"
+#import "mineAllMenu.h"
 
-@implementation profileView
+@implementation mineAllMenu
 
 /*
 // Only override drawRect: if you perform custom drawing.
