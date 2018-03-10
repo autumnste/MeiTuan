@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface mineAllMenu : UIView
+- (IBAction)pushToCollection:(id)sender;
 
 @end

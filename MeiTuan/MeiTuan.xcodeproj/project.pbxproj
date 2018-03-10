@@ -13,12 +13,16 @@
 		D0645FF9204E755500B5851D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0645FF8204E755500B5851D /* main.m */; };
 		D0646003204E755500B5851D /* MeiTuanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646002204E755500B5851D /* MeiTuanTests.m */; };
 		D064600E204E755500B5851D /* MeiTuanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D064600D204E755500B5851D /* MeiTuanUITests.m */; };
-		D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646021204E7A0100B5851D /* MainTabBarController.m */; };
 		D0646024204E85D100B5851D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0646023204E85D100B5851D /* Media.xcassets */; };
-		D0646027204E948E00B5851D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646026204E948E00B5851D /* firstViewController.m */; };
-		D0646030204FAE8700B5851D /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D064602F204FAE8700B5851D /* mineViewController.m */; };
 		D064603B204FF0DA00B5851D /* profileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D064603A204FF0DA00B5851D /* profileView.xib */; };
 		D0646041204FF79000B5851D /* profileView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0646040204FF79000B5851D /* profileView.m */; };
+		D064604A2052489200B5851D /* firstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460452052489100B5851D /* firstViewController.m */; };
+		D064604B2052489200B5851D /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460462052489200B5851D /* MainTabBarController.m */; };
+		D064604C2052489200B5851D /* mineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460482052489200B5851D /* mineViewController.m */; };
+		D0646050205248FC00B5851D /* profileSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D064604F205248FC00B5851D /* profileSettingViewController.m */; };
+		D06460602052721300B5851D /* mineAllMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D064605F2052721300B5851D /* mineAllMenu.m */; };
+		D06460622052723300B5851D /* mineAllMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06460612052723300B5851D /* mineAllMenu.xib */; };
+		D06460652052875300B5851D /* Conllection.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460642052875300B5851D /* Conllection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,16 +56,23 @@
 		D0646009204E755500B5851D /* MeiTuanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeiTuanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D064600D204E755500B5851D /* MeiTuanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeiTuanUITests.m; sourceTree = "<group>"; };
 		D064600F204E755500B5851D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0646020204E7A0100B5851D /* MainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
-		D0646021204E7A0100B5851D /* MainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		D0646023204E85D100B5851D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		D0646025204E948E00B5851D /* firstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
-		D0646026204E948E00B5851D /* firstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
-		D064602E204FAE8700B5851D /* mineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
-		D064602F204FAE8700B5851D /* mineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mineViewController.m; sourceTree = "<group>"; };
 		D064603A204FF0DA00B5851D /* profileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = profileView.xib; sourceTree = "<group>"; };
 		D064603F204FF79000B5851D /* profileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = profileView.h; sourceTree = "<group>"; };
 		D0646040204FF79000B5851D /* profileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = profileView.m; sourceTree = "<group>"; };
+		D06460442052489100B5851D /* firstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstViewController.h; sourceTree = "<group>"; };
+		D06460452052489100B5851D /* firstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstViewController.m; sourceTree = "<group>"; };
+		D06460462052489200B5851D /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		D06460472052489200B5851D /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		D06460482052489200B5851D /* mineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mineViewController.m; sourceTree = "<group>"; };
+		D06460492052489200B5851D /* mineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mineViewController.h; sourceTree = "<group>"; };
+		D064604E205248FC00B5851D /* profileSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = profileSettingViewController.h; sourceTree = "<group>"; };
+		D064604F205248FC00B5851D /* profileSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = profileSettingViewController.m; sourceTree = "<group>"; };
+		D064605E2052721300B5851D /* mineAllMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mineAllMenu.h; sourceTree = "<group>"; };
+		D064605F2052721300B5851D /* mineAllMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mineAllMenu.m; sourceTree = "<group>"; };
+		D06460612052723300B5851D /* mineAllMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mineAllMenu.xib; sourceTree = "<group>"; };
+		D06460632052875300B5851D /* Conllection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conllection.h; sourceTree = "<group>"; };
+		D06460642052875300B5851D /* Conllection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conllection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +123,8 @@
 		D0645FE8204E755500B5851D /* MeiTuan */ = {
 			isa = PBXGroup;
 			children = (
+				D06460432052478900B5851D /* contollers */,
 				D0646033204FE9CD00B5851D /* views */,
-				D064601C204E78D400B5851D /* controllers */,
 				D0646034204FE9DF00B5851D /* others */,
 				D0646023204E85D100B5851D /* Media.xcassets */,
 			);
@@ -138,19 +149,6 @@
 			path = MeiTuanUITests;
 			sourceTree = "<group>";
 		};
-		D064601C204E78D400B5851D /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D0646020204E7A0100B5851D /* MainTabBarController.h */,
-				D0646021204E7A0100B5851D /* MainTabBarController.m */,
-				D0646025204E948E00B5851D /* firstViewController.h */,
-				D0646026204E948E00B5851D /* firstViewController.m */,
-				D064602E204FAE8700B5851D /* mineViewController.h */,
-				D064602F204FAE8700B5851D /* mineViewController.m */,
-			);
-			name = controllers;
-			sourceTree = "<group>";
-		};
 		D0646033204FE9CD00B5851D /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +157,9 @@
 				D064603A204FF0DA00B5851D /* profileView.xib */,
 				D064603F204FF79000B5851D /* profileView.h */,
 				D0646040204FF79000B5851D /* profileView.m */,
+				D064605E2052721300B5851D /* mineAllMenu.h */,
+				D064605F2052721300B5851D /* mineAllMenu.m */,
+				D06460612052723300B5851D /* mineAllMenu.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -172,6 +173,39 @@
 				D0645FF8204E755500B5851D /* main.m */,
 			);
 			name = others;
+			sourceTree = "<group>";
+		};
+		D06460432052478900B5851D /* contollers */ = {
+			isa = PBXGroup;
+			children = (
+				D06460512052526700B5851D /* tools */,
+				D064604D205248C800B5851D /* mine */,
+				D06460442052489100B5851D /* firstViewController.h */,
+				D06460452052489100B5851D /* firstViewController.m */,
+				D06460472052489200B5851D /* MainTabBarController.h */,
+				D06460462052489200B5851D /* MainTabBarController.m */,
+			);
+			name = contollers;
+			sourceTree = "<group>";
+		};
+		D064604D205248C800B5851D /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				D06460492052489200B5851D /* mineViewController.h */,
+				D06460482052489200B5851D /* mineViewController.m */,
+				D064604E205248FC00B5851D /* profileSettingViewController.h */,
+				D064604F205248FC00B5851D /* profileSettingViewController.m */,
+				D06460632052875300B5851D /* Conllection.h */,
+				D06460642052875300B5851D /* Conllection.m */,
+			);
+			name = mine;
+			sourceTree = "<group>";
+		};
+		D06460512052526700B5851D /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06460622052723300B5851D /* mineAllMenu.xib in Resources */,
 				D064603B204FF0DA00B5851D /* profileView.xib in Resources */,
 				D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */,
 				D0646024204E85D100B5851D /* Media.xcassets in Resources */,
@@ -309,11 +344,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0645FF9204E755500B5851D /* main.m in Sources */,
-				D0646030204FAE8700B5851D /* mineViewController.m in Sources */,
+				D064604B2052489200B5851D /* MainTabBarController.m in Sources */,
 				D0646041204FF79000B5851D /* profileView.m in Sources */,
+				D0646050205248FC00B5851D /* profileSettingViewController.m in Sources */,
+				D064604C2052489200B5851D /* mineViewController.m in Sources */,
 				D0645FEB204E755500B5851D /* AppDelegate.m in Sources */,
-				D0646022204E7A0100B5851D /* MainTabBarController.m in Sources */,
-				D0646027204E948E00B5851D /* firstViewController.m in Sources */,
+				D06460652052875300B5851D /* Conllection.m in Sources */,
+				D064604A2052489200B5851D /* firstViewController.m in Sources */,
+				D06460602052721300B5851D /* mineAllMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

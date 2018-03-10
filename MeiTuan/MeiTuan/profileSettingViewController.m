@@ -8,22 +8,37 @@
 
 #import "profileSettingViewController.h"
 
+
 @interface profileSettingViewController ()
 
 @end
 
 @implementation profileSettingViewController
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor grayColor];
+    self.navigationController.navigationBar.hidden = NO;
+    self.navigationItem.title = @"个人信息";
+    self.navigationItem.leftBarButtonItem = [self setBackItem];
+    
+    
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (UIBarButtonItem *)setBackItem{
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 20, 25)];
+    UIButton *btn = [[UIButton alloc]initWithFrame:view.frame];
+    [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [btn setImage:[UIImage imageNamed:@"btn_backItem.png"] forState:UIControlStateNormal];
+    [view addSubview:btn];
+    UIBarButtonItem *backBtn = [[UIBarButtonItem alloc]initWithCustomView:view];
+    return backBtn;
+}
+- (void)back{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 

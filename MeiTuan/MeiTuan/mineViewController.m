@@ -8,6 +8,9 @@
 
 #import "mineViewController.h"
 #import "profileView.h"
+#import "profileSettingViewController.h"
+#import "mineAllMenu.h"
+#import "Conllection.h"
 @interface mineViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property(nonatomic,assign)float fresh;
@@ -27,31 +30,35 @@
     [self.view addSubview:self.topView];
     [self setScrollView];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushProfileSetting) name:@"headDidClick" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushCollection) name:@"CollectionClick" object:nil];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBar.hidden = YES;
+
 }
 
 - (void)setScrollView{
-    CGSize size = {self.view.bounds.size.width,self.view.bounds.size.height + 50};
+    CGSize size = {self.view.bounds.size.width,self.view.bounds.size.height};
     self.scrollView.contentSize = size;
     self.scrollView.delegate = self;
     UIView *bgWhite = [[UIView alloc]init];
     bgWhite.backgroundColor = [UIColor whiteColor];
     UIImage *arc = [UIImage imageNamed:@"mineTopArc.png"];
-    bgWhite.frame = CGRectMake(0, 124, self.scrollView.frame.size.width, self.scrollView.contentSize.height);
+    bgWhite.frame = CGRectMake(0, 124, self.scrollView.frame.size.width, self.scrollView.frame.size.height+200);
     UIImageView *arcimg = [[UIImageView alloc]initWithImage:arc];
     arcimg.frame = CGRectMake(0, 64, self.scrollView.bounds.size.width, 60);
     profileView *head = [[profileView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/4, 40, 200, 100)];
-    [self.scrollView addSubview:head];
-    [self.scrollView addSubview:arcimg];
+    mineAllMenu *menu = [[mineAllMenu alloc]initWithFrame:CGRectMake(0, head.frame.size.height + 10, self.view.frame.size.width,270)];
     [self.scrollView addSubview:bgWhite];
+    [self.scrollView addSubview:head];
+    [self.scrollView addSubview:menu];
+    [self.scrollView addSubview:arcimg];
     [self.scrollView bringSubviewToFront:head];
 
     
 }
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
-}
 
 /**
  
@@ -82,11 +89,20 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)pushCollection{
+    Conllection *collection = [[Conllection alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:collection animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
+}
 - (void)pushProfileSetting{
-    [self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:YES];
-    
+    profileSettingViewController *profileSetting = [[profileSettingViewController alloc]init];
+    self.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:profileSetting animated:YES];
+    self.hidesBottomBarWhenPushed = NO;
 }
 - (void)dealloc{
+    NSLog(@"已注销");
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
