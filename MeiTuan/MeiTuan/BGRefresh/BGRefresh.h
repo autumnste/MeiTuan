@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^animatOption)();
+typedef void(^animatOption)(void);
 
 @interface BGRefresh : UIView
 

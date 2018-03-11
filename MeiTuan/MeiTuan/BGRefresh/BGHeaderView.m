@@ -15,7 +15,7 @@
 @implementation BGHeaderView
 
 -(void)awakeFromNib{
-    
+    [super awakeFromNib];
 }
 
 +(instancetype)view{

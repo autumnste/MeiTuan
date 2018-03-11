@@ -76,15 +76,15 @@ typedef enum {
     
     [_header.prompt setText:@"松手更新..."];
     NSMutableArray  *arrayM=[NSMutableArray array];
-    for (int i=1; i<3; i++) {
-        [arrayM addObject:[UIImage imageNamed:[NSString stringWithFormat:@"deliveryStaff%d",i]]];
+    for (int i=1; i<4; i++) {
+        [arrayM addObject:[UIImage imageNamed:[NSString stringWithFormat:@"loading_%d",i]]];
     }
     //设置动画数组
     [_header.icon setAnimationImages:arrayM];
     //设置动画播放次数
     [_header.icon setAnimationRepeatCount:0];
     //设置动画播放时间
-    [_header.icon setAnimationDuration:3*0.075];
+    [_header.icon setAnimationDuration:4*0.075];
     //开始动画
     [_header.icon startAnimating];
     NSLog(@"播放动画...");
@@ -140,7 +140,10 @@ typedef enum {
 -(void)hide{
     UIEdgeInsets inset = _scrollview.contentInset;
     inset.top = _scrollViewInitInset.top;
-    _scrollview.contentInset = inset;
+    [UIView animateWithDuration:0.3 animations:^{
+        _scrollview.contentInset = inset;
+        
+    }];
     [self setState:BGRefreshStateNormal];
     self.iconScale = 0.0;
     if (self.endBlock) {
