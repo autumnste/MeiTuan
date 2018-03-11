@@ -7,7 +7,6 @@
 //
 
 #import "Conllection.h"
-
 @interface Conllection ()
 
 @end
@@ -19,7 +18,7 @@
     self.view.backgroundColor = [UIColor grayColor];
     self.navigationController.navigationBar.hidden = NO;
     self.navigationItem.title = @"收藏";
-    self.navigationItem.leftBarButtonItem = [self setBackItem];
+    self.navigationItem.leftBarButtonItem = [self setBackItem];    
     
     
 }
@@ -39,5 +38,6 @@
 - (void)back{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 
 @end

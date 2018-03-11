@@ -26,8 +26,10 @@
     topview.backgroundColor = [UIColor colorWithRed:37.0/255.0 green:186.0/255.0 blue:173.0/255.0 alpha:1];
     self.fresh = 0;
     topview.alpha = self.fresh;
+    
     self.topView = topview;
     [self.view addSubview:self.topView];
+    [self topButtonsWithTopView:self.topView.frame];
     [self setScrollView];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushProfileSetting) name:@"headDidClick" object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(pushCollection) name:@"CollectionClick" object:nil];
@@ -36,6 +38,25 @@
     [super viewWillAppear:YES];
     self.navigationController.navigationBar.hidden = YES;
 
+}
+- (void)topButtonsWithTopView: (CGRect)topframe{
+    UIView *clearview = [[UIView alloc]initWithFrame:topframe];
+    clearview.backgroundColor = [UIColor clearColor];
+    UIButton *btnSet = [[UIButton alloc]init];
+    [btnSet setImage:[UIImage imageNamed:@"icon_main_setting.png"] forState:UIControlStateNormal];
+    btnSet.frame = CGRectMake(10, (topframe.size.height - 20) * 0.6, 20, 20);
+    
+    UIButton *btnMsg = [[UIButton alloc]init];
+    [btnMsg setImage:[UIImage imageNamed:@"icon_navigationItem_message_normal.png"] forState:UIControlStateNormal];
+    btnMsg.frame =CGRectMake(topframe.size.width - 30, btnSet.frame.origin.y, 20, 20);
+    
+    UIButton *btnTheme = [[UIButton alloc]init];
+    [btnTheme setImage:[UIImage imageNamed:@"icon_navigationItem_theme_normal.png"] forState:UIControlStateNormal];
+    btnTheme.frame = CGRectMake(btnMsg.frame.origin.x - 30, btnSet.frame.origin.y, 20, 20);
+    [clearview addSubview:btnMsg];
+    [clearview addSubview:btnTheme];
+    [clearview addSubview:btnSet];
+    [self.view addSubview:clearview];
 }
 
 - (void)setScrollView{

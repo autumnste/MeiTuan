@@ -136,6 +136,7 @@
                     <tabBarItem key="tabBarItem" title="首页" image="pfb_tabbar_homepage" selectedImage="pfb_tabbar_homepage_selected" id="hmf-is-a40"/>
                     <navigationItem key="navigationItem" id="1Z8-bS-Ep1"/>
                     <connections>
+                        <outlet property="scrollView" destination="IQW-Jf-RTb" id="The-X7-q76"/>
                         <outlet property="searchBtn" destination="0Iy-vF-2Fa" id="Grw-MI-0zd"/>
                     </connections>
                 </viewController>

@@ -23,6 +23,14 @@
 		D06460602052721300B5851D /* mineAllMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D064605F2052721300B5851D /* mineAllMenu.m */; };
 		D06460622052723300B5851D /* mineAllMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06460612052723300B5851D /* mineAllMenu.xib */; };
 		D06460652052875300B5851D /* Conllection.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460642052875300B5851D /* Conllection.m */; };
+		D06460832053B8D200B5851D /* SQBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D064607E2053B8D100B5851D /* SQBannerCollectionViewCell.m */; };
+		D06460842053B8D200B5851D /* SQBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D064607F2053B8D100B5851D /* SQBannerCollectionViewCell.xib */; };
+		D06460852053B8D200B5851D /* SQBannarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D06460802053B8D100B5851D /* SQBannarView.m */; };
+		D06460972053C36100B5851D /* banner_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D06460922053C36100B5851D /* banner_4.png */; };
+		D06460982053C36100B5851D /* banner_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D06460932053C36100B5851D /* banner_2.png */; };
+		D06460992053C36100B5851D /* banner_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D06460942053C36100B5851D /* banner_1.png */; };
+		D064609A2053C36100B5851D /* banner_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D06460952053C36100B5851D /* banner_3.png */; };
+		D064609B2053C36100B5851D /* banner_5.png in Resources */ = {isa = PBXBuildFile; fileRef = D06460962053C36100B5851D /* banner_5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,16 @@
 		D06460612052723300B5851D /* mineAllMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mineAllMenu.xib; sourceTree = "<group>"; };
 		D06460632052875300B5851D /* Conllection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Conllection.h; sourceTree = "<group>"; };
 		D06460642052875300B5851D /* Conllection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Conllection.m; sourceTree = "<group>"; };
+		D064607E2053B8D100B5851D /* SQBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		D064607F2053B8D100B5851D /* SQBannerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQBannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		D06460802053B8D100B5851D /* SQBannarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQBannarView.m; sourceTree = "<group>"; };
+		D06460812053B8D200B5851D /* SQBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		D06460822053B8D200B5851D /* SQBannarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQBannarView.h; sourceTree = "<group>"; };
+		D06460922053C36100B5851D /* banner_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_4.png; sourceTree = "<group>"; };
+		D06460932053C36100B5851D /* banner_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_2.png; sourceTree = "<group>"; };
+		D06460942053C36100B5851D /* banner_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_1.png; sourceTree = "<group>"; };
+		D06460952053C36100B5851D /* banner_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_3.png; sourceTree = "<group>"; };
+		D06460962053C36100B5851D /* banner_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banner_5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +144,7 @@
 				D06460432052478900B5851D /* contollers */,
 				D0646033204FE9CD00B5851D /* views */,
 				D0646034204FE9DF00B5851D /* others */,
+				D06460872053BA3500B5851D /* resource */,
 				D0646023204E85D100B5851D /* Media.xcassets */,
 			);
 			path = MeiTuan;
@@ -178,10 +197,9 @@
 		D06460432052478900B5851D /* contollers */ = {
 			isa = PBXGroup;
 			children = (
+				D06460862053BA0500B5851D /* first */,
 				D06460512052526700B5851D /* tools */,
 				D064604D205248C800B5851D /* mine */,
-				D06460442052489100B5851D /* firstViewController.h */,
-				D06460452052489100B5851D /* firstViewController.m */,
 				D06460472052489200B5851D /* MainTabBarController.h */,
 				D06460462052489200B5851D /* MainTabBarController.m */,
 			);
@@ -204,8 +222,42 @@
 		D06460512052526700B5851D /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				D06460752053B75C00B5851D /* banner */,
 			);
 			name = tools;
+			sourceTree = "<group>";
+		};
+		D06460752053B75C00B5851D /* banner */ = {
+			isa = PBXGroup;
+			children = (
+				D06460822053B8D200B5851D /* SQBannarView.h */,
+				D06460802053B8D100B5851D /* SQBannarView.m */,
+				D06460812053B8D200B5851D /* SQBannerCollectionViewCell.h */,
+				D064607E2053B8D100B5851D /* SQBannerCollectionViewCell.m */,
+				D064607F2053B8D100B5851D /* SQBannerCollectionViewCell.xib */,
+			);
+			name = banner;
+			sourceTree = "<group>";
+		};
+		D06460862053BA0500B5851D /* first */ = {
+			isa = PBXGroup;
+			children = (
+				D06460442052489100B5851D /* firstViewController.h */,
+				D06460452052489100B5851D /* firstViewController.m */,
+			);
+			name = first;
+			sourceTree = "<group>";
+		};
+		D06460872053BA3500B5851D /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				D06460942053C36100B5851D /* banner_1.png */,
+				D06460932053C36100B5851D /* banner_2.png */,
+				D06460952053C36100B5851D /* banner_3.png */,
+				D06460922053C36100B5851D /* banner_4.png */,
+				D06460962053C36100B5851D /* banner_5.png */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +368,14 @@
 			files = (
 				D06460622052723300B5851D /* mineAllMenu.xib in Resources */,
 				D064603B204FF0DA00B5851D /* profileView.xib in Resources */,
+				D06460972053C36100B5851D /* banner_4.png in Resources */,
+				D064609B2053C36100B5851D /* banner_5.png in Resources */,
+				D06460842053B8D200B5851D /* SQBannerCollectionViewCell.xib in Resources */,
 				D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */,
 				D0646024204E85D100B5851D /* Media.xcassets in Resources */,
+				D06460982053C36100B5851D /* banner_2.png in Resources */,
+				D064609A2053C36100B5851D /* banner_3.png in Resources */,
+				D06460992053C36100B5851D /* banner_1.png in Resources */,
 				D0645FF1204E755500B5851D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +409,8 @@
 				D0645FEB204E755500B5851D /* AppDelegate.m in Sources */,
 				D06460652052875300B5851D /* Conllection.m in Sources */,
 				D064604A2052489200B5851D /* firstViewController.m in Sources */,
+				D06460832053B8D200B5851D /* SQBannerCollectionViewCell.m in Sources */,
+				D06460852053B8D200B5851D /* SQBannarView.m in Sources */,
 				D06460602052721300B5851D /* mineAllMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
