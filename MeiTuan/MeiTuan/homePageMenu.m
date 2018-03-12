@@ -11,6 +11,8 @@
 @implementation homePageMenu
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
+    self.autoresizesSubviews = NO;
+
     if (self) {
         NSArray *array = [[NSBundle mainBundle]loadNibNamed:@"homePageMenu" owner:self options:nil];
         UIView *view = [array objectAtIndex:0];

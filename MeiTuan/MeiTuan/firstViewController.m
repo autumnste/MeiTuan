@@ -52,7 +52,7 @@
         UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"banner_%ld.png",i+1]];
         [imageViews addObject:image];
     }
-    SQBannarView *bannerView = [[SQBannarView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 50) viewSize:CGSizeMake(CGRectGetWidth(self.scrollView.bounds),100)];
+    SQBannarView *bannerView = [[SQBannarView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50) viewSize:CGSizeMake(CGRectGetWidth(self.view.bounds),100)];
     bannerView.items = imageViews;
     [self.scrollView addSubview:bannerView];
     
@@ -60,7 +60,7 @@
         NSLog(@"点击图片%ld",index + 1);
     }];
     //banner下面addMenu
-    [self addHomeMenuWithFrame:CGRectMake(0, CGRectGetMaxY(bannerView.bounds), self.scrollView.frame.size.width, 200)];
+    [self addHomeMenuWithFrame:CGRectMake(0, CGRectGetMaxY(bannerView.bounds), self.view.frame.size.width, 200)];
     
 }
 - (void)didReceiveMemoryWarning {

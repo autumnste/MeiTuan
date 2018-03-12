@@ -16,9 +16,12 @@
 
 -(void)awakeFromNib{
     [super awakeFromNib];
+    self.autoresizesSubviews = NO;
+
 }
 
 +(instancetype)view{
+    
     return [[[NSBundle mainBundle] loadNibNamed:@"BGHeaderView" owner:nil options:nil] firstObject];
 }
 

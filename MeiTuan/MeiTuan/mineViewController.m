@@ -21,6 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.autoresizesSubviews = NO;
+
     self.navigationController.navigationBar.hidden = YES;
     UIView *topview = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
     topview.backgroundColor = [UIColor colorWithRed:37.0/255.0 green:186.0/255.0 blue:173.0/255.0 alpha:1];
@@ -66,9 +68,9 @@
     UIView *bgWhite = [[UIView alloc]init];
     bgWhite.backgroundColor = [UIColor whiteColor];
     UIImage *arc = [UIImage imageNamed:@"mineTopArc.png"];
-    bgWhite.frame = CGRectMake(0, 124, self.scrollView.frame.size.width, self.scrollView.frame.size.height+200);
+    bgWhite.frame = CGRectMake(0, 124, self.view.frame.size.width, self.scrollView.frame.size.height+200);
     UIImageView *arcimg = [[UIImageView alloc]initWithImage:arc];
-    arcimg.frame = CGRectMake(0, 64, self.scrollView.bounds.size.width, 60);
+    arcimg.frame = CGRectMake(0, 64, self.view.bounds.size.width, 60);
     profileView *head = [[profileView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-200)/4, 40, 200, 100)];
     mineAllMenu *menu = [[mineAllMenu alloc]initWithFrame:CGRectMake(0, head.frame.size.height + 10, self.view.frame.size.width,270)];
     [self.scrollView addSubview:bgWhite];

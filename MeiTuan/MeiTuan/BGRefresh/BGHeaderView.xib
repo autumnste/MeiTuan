@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="968-4T-cjy" customClass="BGHeaderView">
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="968-4T-cjy" customClass="BGHeaderView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-qU-94s">
+                <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="8dV-qU-94s">
                     <rect key="frame" x="162.5" y="10.5" width="50" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="FDY-ba-wg4"/>
