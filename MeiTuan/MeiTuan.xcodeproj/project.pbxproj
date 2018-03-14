@@ -47,6 +47,17 @@
 		D078451E20564FD300129537 /* ad2.png in Resources */ = {isa = PBXBuildFile; fileRef = D078451A20564FD300129537 /* ad2.png */; };
 		D078451F20564FD300129537 /* ad4.png in Resources */ = {isa = PBXBuildFile; fileRef = D078451B20564FD300129537 /* ad4.png */; };
 		D078452020564FD300129537 /* ad3.png in Resources */ = {isa = PBXBuildFile; fileRef = D078451C20564FD300129537 /* ad3.png */; };
+		D0CE38762058EC50005D39EF /* SqliteTool.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE38722058EC50005D39EF /* SqliteTool.m */; };
+		D0CE38772058EC50005D39EF /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE38732058EC50005D39EF /* Student.m */; };
+		D0CE387A2058F5B0005D39EF /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38792058F5B0005D39EF /* data.sqlite */; };
+		D0CE387E2058F99E005D39EF /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE387C2058F99E005D39EF /* Cell.m */; };
+		D0CE387F2058F99E005D39EF /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CE387D2058F99E005D39EF /* Cell.xib */; };
+		D0CE38862058FAA4005D39EF /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38802058FAA3005D39EF /* icon1.png */; };
+		D0CE38872058FAA4005D39EF /* icon5.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38812058FAA3005D39EF /* icon5.png */; };
+		D0CE38882058FAA4005D39EF /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38822058FAA3005D39EF /* icon3.png */; };
+		D0CE38892058FAA4005D39EF /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38832058FAA3005D39EF /* icon4.png */; };
+		D0CE388A2058FAA4005D39EF /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38842058FAA3005D39EF /* icon2.png */; };
+		D0CE388B2058FAA4005D39EF /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CE38852058FAA4005D39EF /* icon6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +139,20 @@
 		D078451A20564FD300129537 /* ad2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad2.png; sourceTree = "<group>"; };
 		D078451B20564FD300129537 /* ad4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad4.png; sourceTree = "<group>"; };
 		D078451C20564FD300129537 /* ad3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad3.png; sourceTree = "<group>"; };
+		D0CE38722058EC50005D39EF /* SqliteTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteTool.m; sourceTree = "<group>"; };
+		D0CE38732058EC50005D39EF /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		D0CE38742058EC50005D39EF /* SqliteTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteTool.h; sourceTree = "<group>"; };
+		D0CE38752058EC50005D39EF /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		D0CE38792058F5B0005D39EF /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
+		D0CE387B2058F99E005D39EF /* Cell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		D0CE387C2058F99E005D39EF /* Cell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		D0CE387D2058F99E005D39EF /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		D0CE38802058FAA3005D39EF /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		D0CE38812058FAA3005D39EF /* icon5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon5.png; sourceTree = "<group>"; };
+		D0CE38822058FAA3005D39EF /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		D0CE38832058FAA3005D39EF /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
+		D0CE38842058FAA3005D39EF /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		D0CE38852058FAA4005D39EF /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +203,8 @@
 		D0645FE8204E755500B5851D /* MeiTuan */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE38782058F594005D39EF /* Sqlite */,
+				D06460512052526700B5851D /* tools */,
 				D06460432052478900B5851D /* contollers */,
 				D0646033204FE9CD00B5851D /* views */,
 				D0646034204FE9DF00B5851D /* others */,
@@ -222,6 +249,9 @@
 				D078451420563F9400129537 /* adView.h */,
 				D078451520563F9400129537 /* adView.m */,
 				D078451720563FAC00129537 /* adView.xib */,
+				D0CE387B2058F99E005D39EF /* Cell.h */,
+				D0CE387C2058F99E005D39EF /* Cell.m */,
+				D0CE387D2058F99E005D39EF /* Cell.xib */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -240,7 +270,6 @@
 		D06460432052478900B5851D /* contollers */ = {
 			isa = PBXGroup;
 			children = (
-				D06460512052526700B5851D /* tools */,
 				D06460862053BA0500B5851D /* first */,
 				D064604D205248C800B5851D /* mine */,
 				D06460472052489200B5851D /* MainTabBarController.h */,
@@ -265,6 +294,7 @@
 		D06460512052526700B5851D /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE38712058EC50005D39EF /* SqliteTool */,
 				D078450B205521A400129537 /* BGRefresh */,
 				D06460752053B75C00B5851D /* banner */,
 			);
@@ -297,6 +327,12 @@
 		D06460872053BA3500B5851D /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE38802058FAA3005D39EF /* icon1.png */,
+				D0CE38842058FAA3005D39EF /* icon2.png */,
+				D0CE38822058FAA3005D39EF /* icon3.png */,
+				D0CE38832058FAA3005D39EF /* icon4.png */,
+				D0CE38812058FAA3005D39EF /* icon5.png */,
+				D0CE38852058FAA4005D39EF /* icon6.png */,
 				D078451920564FD200129537 /* ad1.png */,
 				D078451A20564FD300129537 /* ad2.png */,
 				D078451C20564FD300129537 /* ad3.png */,
@@ -324,6 +360,25 @@
 				D078450D205521A400129537 /* BGRefresh.m */,
 			);
 			path = BGRefresh;
+			sourceTree = "<group>";
+		};
+		D0CE38712058EC50005D39EF /* SqliteTool */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE38722058EC50005D39EF /* SqliteTool.m */,
+				D0CE38732058EC50005D39EF /* Student.m */,
+				D0CE38742058EC50005D39EF /* SqliteTool.h */,
+				D0CE38752058EC50005D39EF /* Student.h */,
+			);
+			path = SqliteTool;
+			sourceTree = "<group>";
+		};
+		D0CE38782058F594005D39EF /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE38792058F5B0005D39EF /* data.sqlite */,
+			);
+			name = Sqlite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,25 +488,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07844A12055209400129537 /* loading_1@2x.png in Resources */,
+				D0CE387F2058F99E005D39EF /* Cell.xib in Resources */,
 				D078449C205505D900129537 /* homePageMenu.xib in Resources */,
 				D06460622052723300B5851D /* mineAllMenu.xib in Resources */,
 				D07844A42055209400129537 /* loading_2@2x.png in Resources */,
 				D064603B204FF0DA00B5851D /* profileView.xib in Resources */,
+				D0CE38872058FAA4005D39EF /* icon5.png in Resources */,
 				D06460972053C36100B5851D /* banner_4.png in Resources */,
+				D0CE388A2058FAA4005D39EF /* icon2.png in Resources */,
 				D078451F20564FD300129537 /* ad4.png in Resources */,
 				D07844A22055209400129537 /* loading_4@2x.png in Resources */,
 				D064609B2053C36100B5851D /* banner_5.png in Resources */,
 				D06460842053B8D200B5851D /* SQBannerCollectionViewCell.xib in Resources */,
 				D0645FF6204E755500B5851D /* LaunchScreen.storyboard in Resources */,
+				D0CE38892058FAA4005D39EF /* icon4.png in Resources */,
 				D0646024204E85D100B5851D /* Media.xcassets in Resources */,
+				D0CE38862058FAA4005D39EF /* icon1.png in Resources */,
 				D0784513205521A400129537 /* BGHeaderView.xib in Resources */,
 				D06460982053C36100B5851D /* banner_2.png in Resources */,
+				D0CE38882058FAA4005D39EF /* icon3.png in Resources */,
 				D078451E20564FD300129537 /* ad2.png in Resources */,
 				D078451820563FAC00129537 /* adView.xib in Resources */,
 				D064609A2053C36100B5851D /* banner_3.png in Resources */,
+				D0CE388B2058FAA4005D39EF /* icon6.png in Resources */,
 				D06460992053C36100B5851D /* banner_1.png in Resources */,
 				D078452020564FD300129537 /* ad3.png in Resources */,
 				D0645FF1204E755500B5851D /* Main.storyboard in Resources */,
+				D0CE387A2058F5B0005D39EF /* data.sqlite in Resources */,
 				D07844A32055209400129537 /* loading_3@2x.png in Resources */,
 				D078451D20564FD300129537 /* ad1.png in Resources */,
 			);
@@ -486,6 +549,8 @@
 				D0645FEB204E755500B5851D /* AppDelegate.m in Sources */,
 				D06460652052875300B5851D /* Conllection.m in Sources */,
 				D064604A2052489200B5851D /* firstViewController.m in Sources */,
+				D0CE387E2058F99E005D39EF /* Cell.m in Sources */,
+				D0CE38762058EC50005D39EF /* SqliteTool.m in Sources */,
 				D078449A205505C700129537 /* homePageMenu.m in Sources */,
 				D06460832053B8D200B5851D /* SQBannerCollectionViewCell.m in Sources */,
 				D0784512205521A400129537 /* BGRefresh.m in Sources */,
@@ -494,6 +559,7 @@
 				D06460602052721300B5851D /* mineAllMenu.m in Sources */,
 				D078451620563F9400129537 /* adView.m in Sources */,
 				D0784511205521A400129537 /* BGHeaderView.m in Sources */,
+				D0CE38772058EC50005D39EF /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
