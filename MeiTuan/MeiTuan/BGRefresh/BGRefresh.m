@@ -56,7 +56,7 @@ typedef enum {
     return self;
 }
 
--(void)setScrollview:(UIScrollView *)scrollview{
+-(void)setScrollview:(UITableView *)scrollview{
     _scrollview = scrollview;
     _scrollViewInitInset = scrollview.contentInset;
     _header.frame = CGRectMake(0.0,0.0,screenW,BGRefreshViewH);

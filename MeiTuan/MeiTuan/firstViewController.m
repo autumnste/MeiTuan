@@ -14,15 +14,16 @@
 #import "locationViewController.h"
 #import <sqlite3.h>
 #import "Cell.h"
-@interface firstViewController ()<UIScrollViewDelegate>
+@interface firstViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+//@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *adView;
 @property (weak, nonatomic) IBOutlet UIView *cellView;
 
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 - (IBAction)btn_location;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     //self.view.translatesAutoresizingMaskIntoConstraints = NO;
     self.navigationController.navigationBar.hidden = YES;
-    [self setScrollView];
+    [self setTablelView];
     
     
 }
@@ -59,25 +60,25 @@
     [_menuView addSubview:homeMenu];
 }
 
-- (void)setScrollView{
-    self.scrollView.delegate = self;
+- (void)setTablelView{
+    self.tableView.delegate = self;
     [self addBanner];
     [self addRefresh];
     [self addHomeMenu];
     [self addAd];
-    [self addcell];
+    //[self addcell];
 }
 
 - (void)addAd{
     adView *midAdView = [[adView alloc]initWithFrame:self.adView.bounds];
     [self.adView addSubview:midAdView];
 }
-- (void)addcell{
-    Cell *cell = [[NSBundle mainBundle]loadNibNamed:@"Cell" owner:nil options:nil].firstObject;
-    [self.cellView addSubview:cell];
-}
+//- (void)addcell{
+//    Cell *cell = [[NSBundle mainBundle]loadNibNamed:@"Cell" owner:nil options:nil].firstObject;
+//    [self.cellView addSubview:cell];
+//}
 - (void)addRefresh{
-    BGRefresh* refresh = [[BGRefresh alloc] init];
+    BGRefresh *refresh = [[BGRefresh alloc] init];
     refresh.startBlock = ^{
         NSLog(@"开始刷新....");
     };
@@ -86,7 +87,7 @@
     };
     refresh.isAutoEnd = YES;//设为自动结束刷新 YES/NO 自动/手动
     refresh.refreshTime = 1.0;//设置自动刷新时间(秒为单位) 手动结束刷新时不设置此项
-    refresh.scrollview = self.scrollView;
+    refresh.scrollview = self.tableView;
 }
 - (void)addBanner{
     NSMutableArray *imageViews = @[].mutableCopy;
@@ -107,7 +108,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"displayCell"];
+    return cell;
+}
 
 - (IBAction)btn_location {
     locationViewController *locationVc = [[locationViewController alloc]init];
