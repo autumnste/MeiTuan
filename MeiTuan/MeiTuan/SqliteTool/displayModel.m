@@ -9,5 +9,15 @@
 #import "displayModel.h"
 
 @implementation displayModel
-
++ (instancetype)displayWithName: (NSString *)name image: (NSString *)image introduction: (NSString *)introduction discount: (NSString *)discount price:(int)price sold: (int)sold
+{
+    displayModel *model = [[self alloc] init];
+    model.name = name;
+    model.image = image;
+    model.introdution = introduction;
+    model.discount = discount;
+    model.price = price;
+    model.sold = sold;
+    return model;
+}
 @end

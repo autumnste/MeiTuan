@@ -8,21 +8,23 @@
 
 #import "SqliteTool.h"
 #import <sqlite3.h>
-#import "Student.h"
+#import "displayModel.h"
 @implementation SqliteTool
 static sqlite3 *_db;
 
 // 初始化数据库
 + (void)initialize
 {
+    NSString *dataBase=[[NSBundle mainBundle]pathForResource:@"data.sqlite" ofType:nil];
     // 之前是都是保存到docment，最近保存到docment，苹果不允许上传。
     // 游戏一般都是document
     // 获取cache文件夹路径
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
     // 拼接文件名
-    NSString *filePath = [cachePath stringByAppendingPathComponent:@"student.sqlite"];
-    
-    
+    NSString *filePath = [cachePath stringByAppendingPathComponent:@"data.sqlite"];
+    NSLog(@"%@", filePath);
+    [[NSFileManager defaultManager] copyItemAtPath:dataBase toPath:filePath error:nil] ;
+
     // 打开数据库，就会创建数据库文件
     // fileName保存数据库的全路径文件名
     // ppDb:数据库实例
@@ -64,15 +66,24 @@ static sqlite3 *_db;
         // 执行句柄
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             
-          //  int ID = sqlite3_column_int(stmt, 0);
-            // 有数据
-            NSString *name = [NSString stringWithUTF8String:sqlite3_column_text(stmt, 1)];
+            //int ID = sqlite3_column_int(stmt, 0);
+             //有数据
+            NSString *name = ((char *)sqlite3_column_text(stmt, 0)) ? [NSString stringWithUTF8String: (char *)sqlite3_column_text(stmt, 0)] : nil;
+
+            int price = sqlite3_column_int(stmt, 1);
+            NSString *image = ((char *)sqlite3_column_text(stmt, 2)) ? [NSString stringWithUTF8String: (char *)sqlite3_column_text(stmt, 2)] : nil;
+
+            int sold = sqlite3_column_int(stmt, 3);
+            NSString *introdution = ((char *)sqlite3_column_text(stmt, 4)) ? [NSString stringWithUTF8String: (char *)sqlite3_column_text(stmt, 4)] : nil;
+
+            NSString *discount = ((char *)sqlite3_column_text(stmt, 5)) ? [NSString stringWithUTF8String: (char *)sqlite3_column_text(stmt, 5)] : nil;
+
+
+
+            displayModel *m = [displayModel displayWithName:name image:image introduction:introdution discount:discount price:price sold:sold];
             
-            int age = sqlite3_column_int(stmt, 2);
             
-            Student *s = [Student studentWithName:name age:age];
-            
-            [arrM addObject:s];
+            [arrM addObject:m];
             
         }
         

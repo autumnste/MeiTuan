@@ -12,7 +12,7 @@ typedef void(^animatOption)(void);
 
 @interface BGRefresh : UIView
 
-@property(weak,nonatomic)UITableView* scrollview;
+@property(weak,nonatomic)UIScrollView* scrollview;
 @property(copy,nonatomic)animatOption startBlock;
 @property(copy,nonatomic)animatOption endBlock;
 @property(assign,nonatomic)BOOL isAutoEnd;//是否自动结束刷新 YES/NO 自动/手动
