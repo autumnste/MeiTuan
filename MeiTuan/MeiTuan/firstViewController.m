@@ -22,10 +22,15 @@
 @property (weak, nonatomic) IBOutlet UIView *bannerView;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *adView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *displayViewHeight;
+
 @property (weak, nonatomic) IBOutlet UIView *displayView;
 @property (weak, nonatomic) IBOutlet UIView *displayTopView;
 @property(nonatomic,strong)NSArray * modelArray;
-
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *displayHeight;
+@property(nonatomic,weak)display_detail *referenceView;
+@property(nonatomic,assign)CGFloat heightOfDisplay;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgViewHeight;
 - (IBAction)btn_location;
 //@property(nonatomic,strong)NSMutableArray * dataArray;
 
@@ -43,9 +48,9 @@
     NSString *sql = @"select * from dataCell;";
     NSArray *arr = [SqliteTool selectWithSql:sql];
     _modelArray = arr;
-    for (displayModel *model in arr) {
-        NSLog(@"%@--%@--%@--%@--%d--%d",model.name,model.image,model.introdution,model.discount,model.price,model.sold);
-    }
+//    for (displayModel *model in arr) {
+//        NSLog(@"%@--%@--%@--%@--%d--%d",model.name,model.image,model.introdution,model.discount,model.price,model.sold);
+//    }
 }
 - (UIView *)bannerView{
     if (_bannerView == nil) {
@@ -71,7 +76,7 @@
 
 - (void)setScrollView{
     self.scrollView.delegate = self;
-    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,self.view.frame.size.height);
+    //self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width,2000);
     [self addBanner];
     [self addRefresh];
     [self addHomeMenu];
@@ -114,22 +119,49 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.displayView addSubview:view];
     displayModel *datamodel = self.modelArray[0];
-    NSLog(@"%@--%s",datamodel.introdution,__func__);
     view.model = datamodel;
     
     NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
     NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.displayTopView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
-    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0 constant:80];
+    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0 constant:115];
     [view addConstraint:height];
     [self.displayView addConstraints:@[top,left,right]];
-    NSLog(@"----%@",view.lbl_introduction.text);
-    
-    
-  
-
+    self.referenceView = view;
+    [self addOtherDisplayDetailView];
 }
+- (void)addOtherDisplayDetailView{
+    
+    for (int i=1; i<self.modelArray.count; i++) {
+        display_detail *view = [[NSBundle mainBundle]loadNibNamed:@"display_detail" owner:nil options:nil].firstObject;
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.displayView addSubview:view];
+        displayModel *datamodel = self.modelArray[i];
+        view.model = datamodel;
+        if (view.lineNum > 1 && view.lineNum < 2) {
+            self.heightOfDisplay = 115;
+        }else{
+            self.heightOfDisplay = 148;
+        }
+        //NSLog(@"%f",view.lineNum);
+        NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+        NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+        NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.referenceView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+        NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:self.heightOfDisplay];
+        [view addConstraint:height];
+        [self.displayView addConstraints:@[top,left,right]];
+        self.referenceView = view;
+        self.displayHeight.constant = 44+115*i;
+        //NSLog(@"%f", self.displayHeight.constant);
+        self.bgViewHeight.constant = self.displayHeight.constant+150;
+        NSLog(@"%f", self.bgViewHeight.constant);
 
+        //self.displayHeight.constant = 1000;
+       // self.bgHeight.constant = view.frame.origin.y;
+        
+
+    }
+}
 
 
 - (IBAction)btn_location {

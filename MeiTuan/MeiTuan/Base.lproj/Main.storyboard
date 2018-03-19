@@ -189,6 +189,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="fUK-Ld-r7Z" firstAttribute="top" secondItem="EVe-hg-WE8" secondAttribute="bottom" constant="5" id="63t-yo-keI"/>
                                             <constraint firstItem="fUK-Ld-r7Z" firstAttribute="leading" secondItem="6tx-im-kOU" secondAttribute="leading" id="9HW-Ir-3yw"/>
@@ -212,7 +213,7 @@
                                     <constraint firstItem="6tx-im-kOU" firstAttribute="centerY" secondItem="ecy-e4-g1s" secondAttribute="centerY" id="eqC-Jp-f8R"/>
                                     <constraint firstItem="6tx-im-kOU" firstAttribute="top" secondItem="ecy-e4-g1s" secondAttribute="top" id="jfh-KY-4px"/>
                                     <constraint firstItem="6tx-im-kOU" firstAttribute="leading" secondItem="ecy-e4-g1s" secondAttribute="leading" id="mrJ-di-oq4"/>
-                                    <constraint firstAttribute="bottom" secondItem="6tx-im-kOU" secondAttribute="bottom" constant="500" id="v9A-ov-8kH"/>
+                                    <constraint firstAttribute="bottom" secondItem="6tx-im-kOU" secondAttribute="bottom" id="v9A-ov-8kH"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -232,8 +233,11 @@
                     <connections>
                         <outlet property="adView" destination="fUK-Ld-r7Z" id="Ljt-Si-x44"/>
                         <outlet property="bannerView" destination="3b3-Jl-WM2" id="Jau-uh-go9"/>
+                        <outlet property="bgViewHeight" destination="v9A-ov-8kH" id="lyF-QH-wZx"/>
+                        <outlet property="displayHeight" destination="erC-T0-oPT" id="Gzc-VF-f8o"/>
                         <outlet property="displayTopView" destination="ptE-wC-bDl" id="OwK-53-ty9"/>
                         <outlet property="displayView" destination="8b9-BJ-s3t" id="NLH-RH-KIJ"/>
+                        <outlet property="displayViewHeight" destination="erC-T0-oPT" id="zPV-BU-Vlj"/>
                         <outlet property="menuView" destination="EVe-hg-WE8" id="2XB-8L-j3V"/>
                         <outlet property="scrollView" destination="ecy-e4-g1s" id="R81-Jh-he5"/>
                         <outlet property="searchBtn" destination="Bbq-do-l2c" id="l91-rJ-Sfn"/>

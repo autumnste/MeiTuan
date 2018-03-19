@@ -16,7 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbl_price;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_sold;
 @property (weak, nonatomic) IBOutlet UIButton *lbl_discount;
+@property (weak, nonatomic) IBOutlet UIImageView *bottomLine;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *discountWidth;
 
+@property(nonatomic,assign) float lineNum;
 //@property (weak, nonatomic) IBOutlet UIImageView *botLine;
 @property(nonatomic,strong)displayModel *model;
 

@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="KvP-mU-Ai3" customClass="display_detail">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-ph-flt">
@@ -77,7 +77,7 @@
                         <constraint firstAttribute="width" constant="40" id="asd-7v-isp"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="8折" backgroundImage="icon_discount_background">
+                    <state key="normal" title="8折">
                         <color key="titleColor" red="1" green="0.38485440009999999" blue="0.24976836590000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                 </button>
@@ -109,6 +109,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="p5h-DF-tj1"/>
             <connections>
+                <outlet property="bottomLine" destination="Lg6-24-72P" id="Szt-7X-WxR"/>
+                <outlet property="discountWidth" destination="asd-7v-isp" id="UQW-uo-mRs"/>
                 <outlet property="lbl_discount" destination="QoX-xC-JGP" id="c7Y-fb-hzC"/>
                 <outlet property="lbl_icon" destination="5n6-ph-flt" id="COi-EZ-wH6"/>
                 <outlet property="lbl_introduction" destination="ulp-mA-6BK" id="Im5-hS-zLO"/>
@@ -116,12 +118,11 @@
                 <outlet property="lbl_price" destination="eBs-tH-v6Y" id="mf7-jQ-1Au"/>
                 <outlet property="lbl_sold" destination="sSN-Nr-se6" id="eQw-8C-peG"/>
             </connections>
-            <point key="canvasLocation" x="-1.5" y="-322.5"/>
+            <point key="canvasLocation" x="-1.5" y="-312.5"/>
         </view>
     </objects>
     <resources>
         <image name="icon1.png" width="175" height="175"/>
-        <image name="icon_discount_background" width="38" height="16"/>
         <image name="line_gray" width="640" height="1"/>
     </resources>
 </document>
