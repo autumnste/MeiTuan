@@ -26,11 +26,13 @@
 
 @property (weak, nonatomic) IBOutlet UIView *displayView;
 @property (weak, nonatomic) IBOutlet UIView *displayTopView;
-@property(nonatomic,strong)NSArray * modelArray;
+@property (nonatomic,strong) NSArray * modelArray;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *displayHeight;
-@property(nonatomic,weak)display_detail *referenceView;
-@property(nonatomic,assign)CGFloat heightOfDisplay;
+@property (nonatomic,weak) display_detail *referenceView;
+@property (nonatomic,assign) CGFloat heightOfDisplay;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgViewHeight;
+@property (nonatomic,strong) UIView *bottomView;
+@property (nonatomic,assign) NSInteger num_load;
 - (IBAction)btn_location;
 //@property(nonatomic,strong)NSMutableArray * dataArray;
 
@@ -40,9 +42,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.num_load = 0;
     self.navigationController.navigationBar.hidden = YES;
     [self selectData];
     [self setScrollView];
+}
+- (UIView *)bottomView{
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc]init];
+    }
+    return _bottomView;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGPoint point = scrollView.contentOffset;
+    CGFloat a = point.y;
+    if (a == self.bgViewHeight.constant) {
+        [UIView animateWithDuration:2 animations:^{
+            [self.bottomView removeFromSuperview];
+        } completion:^(BOOL finished) {
+            [self addOtherDisplayDetailView:self.num_load];
+        }];
+    }
+    
+    
+}
+- (void)addBottomView{
+    self.bottomView.backgroundColor = [UIColor whiteColor];
+    self.bottomView.translatesAutoresizingMaskIntoConstraints = NO;
+    UIActivityIndicatorView *freshView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    freshView.center = CGPointMake(self.view.frame.size.width /2, 22);
+    [_bottomView addSubview:freshView];
+    [freshView startAnimating];
+    
+    [self.displayView addSubview:self.bottomView];
+    NSLayoutConstraint *left = [NSLayoutConstraint constraintWithItem:self.bottomView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0];
+    NSLayoutConstraint *right = [NSLayoutConstraint constraintWithItem:self.bottomView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.displayView attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.bottomView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.referenceView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+    NSLayoutConstraint *height = [NSLayoutConstraint constraintWithItem:self.bottomView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:44];
+    [self.bottomView addConstraint:height];
+    [self.displayView addConstraints:@[top,left,right]];
+    
 }
 - (void)selectData{
     NSString *sql = @"select * from dataCell;";
@@ -82,13 +121,15 @@
     [self addHomeMenu];
     [self addAd];
     [self addDispalyDetail];
+    
+    
 }
+
 
 - (void)addAd{
     adView *midAdView = [[adView alloc]initWithFrame:self.adView.bounds];
     [self.adView addSubview:midAdView];
 }
-
 - (void)addRefresh{
     BGRefresh *refresh = [[BGRefresh alloc] init];
     refresh.startBlock = ^{
@@ -128,10 +169,11 @@
     [view addConstraint:height];
     [self.displayView addConstraints:@[top,left,right]];
     self.referenceView = view;
-    [self addOtherDisplayDetailView];
+    [self addOtherDisplayDetailView:self.num_load];
 }
-- (void)addOtherDisplayDetailView{
-    
+- (void)addOtherDisplayDetailView:(NSInteger)number{
+    self.num_load += 1;
+
     for (int i=1; i<self.modelArray.count; i++) {
         display_detail *view = [[NSBundle mainBundle]loadNibNamed:@"display_detail" owner:nil options:nil].firstObject;
         view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -151,16 +193,19 @@
         [view addConstraint:height];
         [self.displayView addConstraints:@[top,left,right]];
         self.referenceView = view;
-        self.displayHeight.constant = 44+115*i;
-        //NSLog(@"%f", self.displayHeight.constant);
-        self.bgViewHeight.constant = self.displayHeight.constant+150;
-        NSLog(@"%f", self.bgViewHeight.constant);
+
+        self.displayHeight.constant = (44 + 115 * i)*self.num_load;
+        self.bgViewHeight.constant = self.displayHeight.constant+150+44;
+        //NSLog(@"%f", self.bgViewHeight.constant);
 
         //self.displayHeight.constant = 1000;
        // self.bgHeight.constant = view.frame.origin.y;
-        
-
     }
+    [self addBottomView];
+
+    
+    
+
 }
 
 
