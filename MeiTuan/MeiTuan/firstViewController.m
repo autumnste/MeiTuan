@@ -16,6 +16,7 @@
 #import "SqliteTool.h"
 #import "displayModel.h"
 #import "display_detail.h"
+#import "locationPageViewController.h"
 @interface firstViewController ()<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *searchBtn;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -210,7 +211,7 @@
 
 
 - (IBAction)btn_location {
-    locationViewController *locationVc = [[locationViewController alloc]init];
+    locationPageViewController *locationVc = [[locationPageViewController alloc]init];
     [self presentViewController:locationVc animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {

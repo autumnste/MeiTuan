@@ -8,7 +8,10 @@
 
 #import "ContentViewController.h"
 
+
+#define kRandomColor ([UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0f])
 @interface ContentViewController ()
+@property (nonatomic, strong) UILabel *contentLabel;
 
 @end
 
@@ -16,7 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    _contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 100)];
+    _contentLabel.numberOfLines = 0;
+    _contentLabel.backgroundColor = kRandomColor;
+    _contentLabel.text = _content;
+    [self.view addSubview:_contentLabel];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,7 +22,7 @@ static sqlite3 *_db;
     NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
     // 拼接文件名
     NSString *filePath = [cachePath stringByAppendingPathComponent:@"data.sqlite"];
-    NSLog(@"%@", filePath);
+    //NSLog(@"%@", filePath);
     [[NSFileManager defaultManager] copyItemAtPath:dataBase toPath:filePath error:nil] ;
 
     // 打开数据库，就会创建数据库文件
